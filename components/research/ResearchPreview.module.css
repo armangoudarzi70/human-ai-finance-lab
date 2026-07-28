@@ -1,5 +1,5 @@
 .section {
-  padding: 132px clamp(24px, 6vw, 106px) 145px;
+  padding: 110px clamp(24px, 6vw, 106px) 145px;
   background:
     linear-gradient(115deg, rgba(75, 202, 187, 0.07), transparent 42%),
     #dfe9e4;
@@ -104,6 +104,7 @@
   display: flex;
   flex-direction: column;
   padding: clamp(38px, 5vw, 75px);
+  color: inherit;
 }
 
 .cardTop {
@@ -319,6 +320,160 @@
   color: rgba(247, 243, 233, 0.45);
 }
 
+.resultsPanel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  border-left: 1px solid rgba(247, 243, 233, 0.12);
+  background: #f5f2e9;
+  color: #112d33;
+}
+
+.figureTabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid rgba(17, 45, 51, 0.16);
+}
+
+.figureTabs button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 62px;
+  padding: 14px 20px;
+  border: 0;
+  border-right: 1px solid rgba(17, 45, 51, 0.14);
+  background: transparent;
+  color: rgba(17, 45, 51, 0.48);
+  font-size: 9px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.figureTabs button:last-child {
+  border-right: 0;
+}
+
+.figureTabs button::after {
+  position: absolute;
+  right: 20px;
+  bottom: -1px;
+  left: 20px;
+  height: 2px;
+  background: #148b82;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.figureTabs button span {
+  color: #148b82;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.figureTabs .activeTab {
+  color: #112d33;
+}
+
+.figureTabs .activeTab::after {
+  transform: scaleX(1);
+}
+
+.figureSlide {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  margin: 0;
+  padding: 22px 25px 20px;
+  animation: figure-reveal 500ms ease both;
+}
+
+.figureLink {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  color: inherit;
+}
+
+@keyframes figure-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.figureCanvas {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  min-height: 330px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 45, 51, 0.12);
+  background: white;
+}
+
+.figureCanvas img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.figureCaption {
+  display: grid;
+  grid-template-columns: 0.32fr 1fr;
+  gap: 20px;
+  align-items: start;
+  padding-top: 18px;
+}
+
+.figureCaption span {
+  padding-top: 4px;
+  color: #148b82;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.figureCaption strong {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.figureProgress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 0 25px 18px;
+}
+
+.figureProgress i {
+  height: 2px;
+  background: rgba(17, 45, 51, 0.12);
+}
+
+.figureProgress .activeProgress {
+  background: #148b82;
+}
+
 .supportingGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -428,6 +583,12 @@
     border-left: 0;
   }
 
+  .resultsPanel {
+    min-height: 560px;
+    border-top: 1px solid rgba(247, 243, 233, 0.09);
+    border-left: 0;
+  }
+
   .supportingGrid {
     grid-template-columns: 1fr 1fr;
   }
@@ -467,6 +628,27 @@
 
   .signalMap {
     min-height: 330px;
+  }
+
+  .resultsPanel {
+    min-height: 510px;
+  }
+
+  .figureSlide {
+    padding: 18px 16px;
+  }
+
+  .figureCanvas {
+    min-height: 295px;
+  }
+
+  .figureCaption {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .figureProgress {
+    padding: 0 16px 16px;
   }
 
   .supportingGrid {

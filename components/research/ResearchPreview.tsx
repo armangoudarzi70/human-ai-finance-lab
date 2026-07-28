@@ -5,6 +5,7 @@ import {
   studyHref,
   type ResearchStudy,
 } from "@/content/research";
+import ResearchResultCarousel from "./ResearchResultCarousel";
 import styles from "./ResearchPreview.module.css";
 
 function Arrow() {
@@ -31,7 +32,8 @@ export default function ResearchPreview() {
     <section className={styles.section} id="research">
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>Our research</p>
+          <p className={styles.eyebrow}>Research program</p>
+          <h2>Our research.</h2>
         </div>
         <div className={styles.intro}>
           <p>
@@ -44,12 +46,12 @@ export default function ResearchPreview() {
         </div>
       </div>
 
-      <Link
-        className={styles.featured}
-        href={studyHref(featuredStudy) ?? "/research"}
-        aria-label={`Open study: ${featuredStudy.title}`}
-      >
-        <div className={styles.featuredCopy}>
+      <article className={styles.featured}>
+        <Link
+          className={styles.featuredCopy}
+          href={studyHref(featuredStudy) ?? "/research"}
+          aria-label={`Open study: ${featuredStudy.title}`}
+        >
           <div className={styles.cardTop}>
             <span>{featuredStudy.number}</span>
             <Status study={featuredStudy} />
@@ -64,20 +66,9 @@ export default function ResearchPreview() {
           <span className={styles.openStudy}>
             Open the study <Arrow />
           </span>
-        </div>
-
-        <div className={styles.signalMap} aria-hidden="true">
-          <span className={styles.signalLabel}>AI exposure</span>
-          <div className={styles.ringOne} />
-          <div className={styles.ringTwo} />
-          <div className={styles.signalPath} />
-          <i className={styles.nodeOne} />
-          <i className={styles.nodeTwo} />
-          <i className={styles.nodeThree} />
-          <i className={styles.nodeFour} />
-          <small>Human judgment</small>
-        </div>
-      </Link>
+        </Link>
+        <ResearchResultCarousel />
+      </article>
 
       <div className={styles.supportingGrid}>
         {supportingStudies.map((study) => (
