@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
+import ResearchPreview from "@/components/research/ResearchPreview";
 
 type Phase = "part1" | "part2" | "part3";
 type Condition = "treatment" | "control";
@@ -556,6 +558,8 @@ function ExperimentTour() {
 }
 
 export default function Home() {
+  const showLegacyStudyDetail = false;
+
   return (
     <>
       <a className="skip-link" href="#main-content">
@@ -574,12 +578,12 @@ export default function Home() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="#team">Team</a>
-          <a href="#paper">Research</a>
-          <a href="#experiment">Experiment</a>
+          <Link href="/research">Research</Link>
+          <Link href="/research/ai-exposure-risk-preferences">Featured study</Link>
         </nav>
-        <a className="header-cta" href="#paper">
-          Featured study <ArrowIcon />
-        </a>
+        <Link className="header-cta" href="/research">
+          View research <ArrowIcon />
+        </Link>
       </header>
 
       <main id="main-content">
@@ -689,6 +693,11 @@ export default function Home() {
           </div>
         </section>
 
+        <ResearchPreview />
+
+        {/* Preserved in source while the interactive tour is moved into its route. */}
+        {showLegacyStudyDetail ? (
+        <>
         <section className="paper-section" id="paper">
           <div className="paper-glow" aria-hidden="true" />
           <div className="paper-meta">
@@ -906,7 +915,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="research-section" id="research">
+        <section className="research-section" id="legacy-research">
           <div className="research-heading">
             <p className="eyebrow">A wider research program</p>
             <h2>From individual portfolios to financial markets.</h2>
@@ -959,6 +968,8 @@ export default function Home() {
             </article>
           </div>
         </section>
+        </>
+        ) : null}
 
         <section className="closing-section">
           <p className="eyebrow">Human–AI Finance Lab</p>
@@ -993,8 +1004,8 @@ export default function Home() {
           in finance.
         </p>
         <div>
-          <a href="#paper">Research</a>
-          <a href="#experiment">Experiment</a>
+          <Link href="/research">Research</Link>
+          <Link href="/research/ai-exposure-risk-preferences">Featured study</Link>
           <a href="#team">Team</a>
         </div>
         <small>© 2026 Human–AI Finance Lab</small>

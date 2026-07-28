@@ -1,0 +1,941 @@
+.page {
+  background: #f7f3e9;
+  color: #112d33;
+}
+
+.hero {
+  position: relative;
+  min-height: 940px;
+  overflow: hidden;
+  padding: 144px clamp(24px, 6vw, 106px) 108px;
+  background:
+    radial-gradient(circle at 78% 42%, rgba(75, 202, 187, 0.16), transparent 29%),
+    #071d22;
+  color: #f7f3e9;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 12px;
+  color: rgba(247, 243, 233, 0.4);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: #a9ebe2;
+}
+
+.heroGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.52fr);
+  gap: clamp(70px, 11vw, 180px);
+  align-items: end;
+  margin-top: 100px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 31px;
+  color: rgba(247, 243, 233, 0.55);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4bcabb;
+  box-shadow: 0 0 13px rgba(75, 202, 187, 0.75);
+}
+
+.heroCopy h1 {
+  max-width: 1020px;
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: clamp(62px, 7.25vw, 116px);
+  font-weight: 400;
+  letter-spacing: -0.068em;
+  line-height: 0.87;
+}
+
+.heroCopy > p {
+  margin: 45px 0 0;
+  color: rgba(247, 243, 233, 0.55);
+  font-size: 11px;
+}
+
+.heroSummary {
+  padding: 31px 0 8px;
+  border-top: 1px solid rgba(247, 243, 233, 0.18);
+}
+
+.heroSummary > span,
+.question > span,
+.walkthrough aside > span,
+.materials p {
+  color: #a9ebe2;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.heroSummary p {
+  margin: 20px 0 0;
+  color: rgba(247, 243, 233, 0.66);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.heroSummary p + p {
+  color: rgba(247, 243, 233, 0.46);
+  font-size: 16px;
+}
+
+.heroSignal {
+  position: absolute;
+  right: -5%;
+  bottom: -37%;
+  width: 57vw;
+  max-width: 950px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(169, 235, 226, 0.1);
+  border-radius: 50%;
+}
+
+.heroSignal::before,
+.heroSignal::after {
+  position: absolute;
+  border: 1px solid rgba(169, 235, 226, 0.1);
+  border-radius: 50%;
+  content: "";
+}
+
+.heroSignal::before {
+  inset: 17%;
+  border-style: dashed;
+}
+
+.heroSignal::after {
+  inset: 34%;
+}
+
+.heroSignal > span {
+  position: absolute;
+  z-index: 2;
+  color: rgba(247, 243, 233, 0.35);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heroSignal > span:first-child {
+  top: 18%;
+  left: 14%;
+}
+
+.heroSignal > span:nth-child(2) {
+  top: 34%;
+  left: 47%;
+  color: #efaa58;
+}
+
+.heroSignal > span:nth-child(3) {
+  top: 47%;
+  right: 8%;
+}
+
+.heroSignal > i {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #071d22;
+  border-radius: 50%;
+  background: #4bcabb;
+  box-shadow: 0 0 18px rgba(75, 202, 187, 0.75);
+}
+
+.heroSignal > i:nth-of-type(1) {
+  top: 25%;
+  left: 28%;
+}
+
+.heroSignal > i:nth-of-type(2) {
+  top: 37%;
+  left: 52%;
+  background: #efaa58;
+  box-shadow: 0 0 18px rgba(239, 170, 88, 0.75);
+}
+
+.heroSignal > i:nth-of-type(3) {
+  top: 45%;
+  right: 21%;
+  background: #6b8ff2;
+  box-shadow: 0 0 18px rgba(107, 143, 242, 0.75);
+}
+
+.heroFooter {
+  position: absolute;
+  right: clamp(24px, 6vw, 106px);
+  bottom: 29px;
+  left: clamp(24px, 6vw, 106px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(247, 243, 233, 0.34);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.heroFooter i {
+  width: 43px;
+  height: 1px;
+  background: rgba(247, 243, 233, 0.2);
+}
+
+.studyNav {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 68px;
+  padding: 0 clamp(24px, 6vw, 106px);
+  border-bottom: 1px solid rgba(17, 45, 51, 0.16);
+  background: rgba(247, 243, 233, 0.94);
+  backdrop-filter: blur(15px);
+}
+
+.studyNav > span {
+  color: #148b82;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.studyNav > div {
+  display: flex;
+  gap: clamp(18px, 3vw, 42px);
+}
+
+.studyNav a {
+  color: rgba(17, 45, 51, 0.6);
+  font-size: 10px;
+}
+
+.studyNav a:hover {
+  color: #148b82;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: 60px minmax(330px, 0.78fr) minmax(340px, 0.72fr);
+  grid-template-rows: auto auto;
+  gap: clamp(35px, 6vw, 95px);
+  padding: 140px clamp(24px, 6vw, 106px);
+}
+
+.sectionNumber {
+  color: rgba(17, 45, 51, 0.45);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+}
+
+.sectionTitle > p,
+.designHeading > div > p,
+.findingsHeading > p,
+.experimentHeading > div > p {
+  margin: 0 0 25px;
+  color: #148b82;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sectionTitle h2,
+.designHeading h2,
+.findingsHeading h2,
+.experimentHeading h2,
+.materials h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: clamp(49px, 5vw, 78px);
+  font-weight: 400;
+  letter-spacing: -0.058em;
+  line-height: 0.96;
+}
+
+.sectionTitle h2 em,
+.findingsHeading h2 em {
+  display: block;
+  color: #148b82;
+  font-weight: 400;
+}
+
+.overviewCopy {
+  grid-column: 3;
+  padding-top: 43px;
+}
+
+.overviewCopy p {
+  margin: 22px 0 0;
+  color: #4b6267;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.overviewCopy .lead {
+  margin-top: 0;
+  color: #112d33;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.question {
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 0.48fr 1fr;
+  gap: 60px;
+  margin-top: 28px;
+  padding: 48px 0;
+  border-top: 1px solid rgba(17, 45, 51, 0.18);
+  border-bottom: 1px solid rgba(17, 45, 51, 0.18);
+}
+
+.question > span {
+  color: #148b82;
+}
+
+.question blockquote {
+  max-width: 820px;
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: clamp(27px, 2.8vw, 42px);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.design {
+  position: relative;
+  padding: 130px clamp(24px, 6vw, 106px) 150px;
+  overflow: hidden;
+  background: #071d22;
+  color: #f7f3e9;
+}
+
+.designHeading,
+.experimentHeading {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 0.45fr);
+  gap: clamp(55px, 9vw, 150px);
+  align-items: end;
+}
+
+.designHeading > p,
+.experimentHeading > p {
+  margin: 0 0 6px;
+  color: rgba(247, 243, 233, 0.52);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.designHeading > div > p {
+  color: #a9ebe2;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 80px;
+  border-top: 1px solid rgba(247, 243, 233, 0.15);
+  border-left: 1px solid rgba(247, 243, 233, 0.15);
+}
+
+.timeline article {
+  position: relative;
+  min-height: 430px;
+  padding: clamp(30px, 3.4vw, 50px);
+  border-right: 1px solid rgba(247, 243, 233, 0.15);
+  border-bottom: 1px solid rgba(247, 243, 233, 0.15);
+}
+
+.timeline .aiPhase {
+  background: rgba(75, 202, 187, 0.07);
+}
+
+.timeline article > div {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(247, 243, 233, 0.42);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.timeline h3 {
+  margin: 78px 0 20px;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: clamp(31px, 3vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.timeline p {
+  margin: 0;
+  color: rgba(247, 243, 233, 0.55);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.timeline ul {
+  margin: 33px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  padding: 9px 0;
+  border-top: 1px solid rgba(247, 243, 233, 0.1);
+  color: rgba(247, 243, 233, 0.44);
+  font-size: 9px;
+}
+
+.treatmentWindow {
+  position: absolute;
+  right: 33.33%;
+  bottom: 128px;
+  left: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #a9ebe2;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.treatmentWindow i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4bcabb;
+  box-shadow: 0 0 13px rgba(75, 202, 187, 0.75);
+}
+
+.findings {
+  padding: 140px clamp(24px, 6vw, 106px);
+  background: #dfe9e4;
+}
+
+.findingsHeading {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: clamp(35px, 6vw, 95px);
+}
+
+.findingsHeading > p {
+  padding-top: 12px;
+}
+
+.findingsHeading h2 {
+  max-width: 1050px;
+}
+
+.findingsGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-top: 85px;
+  border-top: 1px solid rgba(17, 45, 51, 0.18);
+  border-left: 1px solid rgba(17, 45, 51, 0.18);
+}
+
+.findingsGrid article {
+  min-height: 290px;
+  padding: clamp(30px, 3.8vw, 55px);
+  border-right: 1px solid rgba(17, 45, 51, 0.18);
+  border-bottom: 1px solid rgba(17, 45, 51, 0.18);
+  background: rgba(255, 253, 248, 0.48);
+}
+
+.findingsGrid article > span {
+  color: #148b82;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 34px;
+}
+
+.findingsGrid h3 {
+  margin: 55px 0 17px;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.findingsGrid p {
+  max-width: 590px;
+  margin: 0;
+  color: #4b6267;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.findingsGrid .primaryFinding {
+  grid-row: span 3;
+  min-height: 870px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  background: #071d22;
+  color: #f7f3e9;
+}
+
+.primaryFinding > span {
+  color: #efaa58 !important;
+  font-size: clamp(82px, 10vw, 155px) !important;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+}
+
+.primaryFinding h3 {
+  margin-top: 65px;
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.primaryFinding p {
+  color: rgba(247, 243, 233, 0.56);
+}
+
+.errorBars {
+  display: flex;
+  gap: 34px;
+  align-items: end;
+  align-self: end;
+  height: 260px;
+  padding-top: 40px;
+}
+
+.errorBars > div {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 54px 1fr;
+  gap: 12px 14px;
+  align-items: end;
+  height: 100%;
+}
+
+.errorBars small {
+  grid-column: 1 / 3;
+  color: rgba(247, 243, 233, 0.42);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.errorBars i {
+  width: 54px;
+  height: 100%;
+  background: rgba(247, 243, 233, 0.16);
+}
+
+.errorBars > div:nth-child(2) i {
+  height: 59%;
+  background: #4bcabb;
+}
+
+.errorBars b {
+  padding-bottom: 2px;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.resultsNote {
+  margin: 18px 0 0;
+  color: rgba(17, 45, 51, 0.46);
+  font-size: 9px;
+}
+
+.experiment {
+  padding: 140px clamp(24px, 6vw, 106px);
+  background: #f7f3e9;
+}
+
+.experimentHeading > div > p {
+  color: #148b82;
+}
+
+.experimentHeading > p {
+  color: #4b6267;
+}
+
+.walkthrough {
+  display: grid;
+  grid-template-columns: 0.38fr 0.62fr;
+  margin-top: 80px;
+  border: 1px solid rgba(17, 45, 51, 0.18);
+  background: #fffdf8;
+}
+
+.walkthrough aside {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 55px);
+  border-right: 1px solid rgba(17, 45, 51, 0.18);
+}
+
+.walkthrough aside > span {
+  color: #148b82;
+}
+
+.walkthrough ol {
+  margin: 55px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.walkthrough li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 15px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(17, 45, 51, 0.13);
+  color: rgba(17, 45, 51, 0.48);
+}
+
+.walkthrough li b {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 8px;
+}
+
+.walkthrough li strong,
+.walkthrough li small {
+  display: block;
+}
+
+.walkthrough li strong {
+  color: #112d33;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.walkthrough li small {
+  margin-top: 5px;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.walkthrough .activeStep {
+  color: #148b82;
+}
+
+.walkthrough .walkthroughNote {
+  margin-top: auto;
+  padding-top: 35px;
+  color: rgba(17, 45, 51, 0.35);
+}
+
+.walkthrough figure {
+  align-self: center;
+  margin: 0;
+  padding: clamp(25px, 4vw, 58px);
+}
+
+.walkthrough figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(17, 45, 51, 0.15);
+}
+
+.imageBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(17, 45, 51, 0.15);
+  border-bottom: 0;
+  background: #e9ece7;
+}
+
+.imageBar i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(17, 45, 51, 0.22);
+}
+
+.imageBar span {
+  margin-left: 7px;
+  color: rgba(17, 45, 51, 0.45);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.walkthrough figcaption {
+  margin-top: 15px;
+  color: rgba(17, 45, 51, 0.45);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.materials {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: clamp(65px, 10vw, 160px);
+  padding: 125px clamp(24px, 6vw, 106px);
+  background: #dfe9e4;
+}
+
+.materials p {
+  color: #148b82;
+}
+
+.materials h2 {
+  max-width: 680px;
+  margin-top: 25px;
+}
+
+.materialLinks {
+  border-top: 1px solid rgba(17, 45, 51, 0.2);
+}
+
+.materialLinks > span,
+.materialLinks > a {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 28px;
+  padding: 31px 0;
+  border-bottom: 1px solid rgba(17, 45, 51, 0.2);
+}
+
+.materialLinks small {
+  color: rgba(17, 45, 51, 0.45);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.materialLinks strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
+    "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.materialLinks svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 980px) {
+  .heroGrid,
+  .designHeading,
+  .experimentHeading,
+  .materials {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 140px;
+  }
+
+  .heroSummary {
+    max-width: 700px;
+  }
+
+  .overview {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .overviewCopy {
+    grid-column: 2;
+  }
+
+  .question {
+    grid-column: 2;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline article {
+    min-height: 350px;
+  }
+
+  .treatmentWindow {
+    display: none;
+  }
+
+  .findingsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .findingsGrid .primaryFinding {
+    grid-row: auto;
+    grid-column: span 2;
+    min-height: 720px;
+  }
+
+  .walkthrough {
+    grid-template-columns: 1fr;
+  }
+
+  .walkthrough aside {
+    border-right: 0;
+    border-bottom: 1px solid rgba(17, 45, 51, 0.18);
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    padding: 120px 20px 110px;
+  }
+
+  .heroGrid {
+    gap: 55px;
+    margin-top: 70px;
+  }
+
+  .heroCopy h1 {
+    font-size: 55px;
+  }
+
+  .heroFooter {
+    right: 20px;
+    left: 20px;
+  }
+
+  .heroFooter span:last-child {
+    display: none;
+  }
+
+  .studyNav {
+    overflow-x: auto;
+    padding: 0 20px;
+  }
+
+  .studyNav > span {
+    display: none;
+  }
+
+  .studyNav > div {
+    min-width: max-content;
+  }
+
+  .overview,
+  .findings {
+    display: block;
+    padding: 88px 20px;
+  }
+
+  .sectionNumber {
+    margin-bottom: 35px;
+  }
+
+  .overviewCopy {
+    padding-top: 50px;
+  }
+
+  .question {
+    display: block;
+  }
+
+  .question blockquote {
+    margin-top: 30px;
+    font-size: 29px;
+  }
+
+  .design,
+  .experiment,
+  .materials {
+    padding: 88px 20px;
+  }
+
+  .timeline {
+    margin-top: 55px;
+  }
+
+  .findingsHeading {
+    grid-template-columns: 1fr;
+  }
+
+  .findingsGrid {
+    grid-template-columns: 1fr;
+    margin-top: 55px;
+  }
+
+  .findingsGrid .primaryFinding {
+    grid-column: auto;
+    min-height: 680px;
+  }
+
+  .errorBars {
+    height: 210px;
+  }
+
+  .walkthrough {
+    margin-top: 55px;
+  }
+
+  .walkthrough figure {
+    padding: 20px;
+  }
+
+  .materials {
+    gap: 55px;
+  }
+
+  .materialLinks > span,
+  .materialLinks > a {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
