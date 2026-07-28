@@ -89,7 +89,7 @@ function NeuralBrainGraphic() {
       <div className="neural-grid" />
       <div className="brain-aura brain-aura-one" />
       <div className="brain-aura brain-aura-two" />
-      <svg className="brain-map" viewBox="0 0 720 610">
+      <svg className="brain-map" viewBox="40 45 620 525">
         <defs>
           <linearGradient id="neuralSignal" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#f0b35a" />
@@ -113,13 +113,10 @@ function NeuralBrainGraphic() {
           </clipPath>
         </defs>
 
-        <g className="head-profile">
-          <path d="M326 474C332 520 311 552 296 586" />
-          <path d="M484 423C484 472 498 516 531 568" />
-          <path d="M250 165C277 109 329 74 395 71C493 66 568 124 590 210C599 244 590 274 605 298L635 340C643 354 634 368 617 371L594 375L600 407C602 421 593 431 577 433L562 435C563 458 550 475 525 479L484 482" />
-          <path d="M588 211C564 222 551 241 552 269" />
-        </g>
-
+        <path
+          className="brain-shell-fill"
+          d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z"
+        />
         <g className="brain-outline">
           <path d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z" />
           <path d="M354 99C338 130 342 159 365 181" />
@@ -130,6 +127,26 @@ function NeuralBrainGraphic() {
           <path d="M359 400C372 366 363 337 338 315" />
           <path d="M254 342C281 330 294 307 293 278" />
           <path d="M238 224C270 230 294 218 308 193" />
+        </g>
+
+        <g className="brain-gyri" clipPath="url(#brainClip)">
+          <path d="M267 161C292 136 326 133 348 152C365 167 365 190 348 207C330 226 300 221 286 243C275 260 283 281 302 288" />
+          <path d="M338 105C321 124 323 145 340 158" />
+          <path d="M395 91C370 111 367 140 386 157C405 174 434 162 448 183C459 199 453 218 438 229" />
+          <path d="M471 111C449 126 447 151 464 168C483 186 512 171 531 191C546 207 541 229 525 242" />
+          <path d="M546 143C528 161 529 181 545 194" />
+          <path d="M568 218C546 220 529 236 531 256C533 277 557 286 557 307" />
+          <path d="M594 270C568 263 548 274 539 294C530 315 542 333 563 340" />
+          <path d="M542 354C520 336 494 338 482 358C469 379 482 399 501 409" />
+          <path d="M469 405C454 382 427 377 408 392C394 404 392 420 400 435" />
+          <path d="M364 397C349 374 323 369 305 384" />
+          <path d="M279 355C300 345 308 326 299 308C290 290 268 287 250 297" />
+          <path d="M240 244C262 249 281 240 290 223" />
+          <path d="M320 258C337 239 361 238 378 253C396 269 390 294 374 308C358 322 336 318 326 336C317 351 325 367 340 375" />
+          <path d="M411 206C391 224 393 249 413 263C435 279 462 265 480 282C497 298 491 323 472 336" />
+          <path d="M398 328C414 306 442 304 459 322C475 338 468 359 454 371" />
+          <path d="M494 229C474 245 476 268 494 280" />
+          <path d="M355 180C378 168 402 178 408 198" />
         </g>
 
         <g className="neural-fade" clipPath="url(#brainClip)">
@@ -193,24 +210,8 @@ function NeuralBrainGraphic() {
         </div>
         <div>
           <small>Artificial intelligence</small>
-          <strong>Signal</strong>
+          <strong>AI signal</strong>
         </div>
-      </div>
-
-      <div className="brain-label label-context">
-        <span>01</span>
-        <p>Context enters a human system.</p>
-      </div>
-      <div className="brain-label label-pathways">
-        <span>02</span>
-        <p>The signal moves through existing pathways.</p>
-      </div>
-      <div className="brain-label label-judgment">
-        <span>03</span>
-        <p>Human judgment remains in the loop.</p>
-      </div>
-      <div className="concept-note">
-        Conceptual signal map
       </div>
     </div>
   );

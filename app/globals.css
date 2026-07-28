@@ -678,19 +678,40 @@ svg {
   stroke-width: 1.35px;
 }
 
+.brain-shell-fill {
+  fill: rgba(75, 202, 187, 0.035);
+  stroke: none;
+}
+
 .head-profile path:first-child,
 .head-profile path:nth-child(2) {
   stroke: rgba(247, 243, 233, 0.1);
 }
 
 .brain-outline {
-  stroke: rgba(169, 235, 226, 0.28);
-  stroke-width: 1.25px;
+  stroke: rgba(169, 235, 226, 0.42);
+  stroke-width: 1.45px;
 }
 
 .brain-outline path:not(:first-child) {
-  stroke: rgba(169, 235, 226, 0.13);
-  stroke-dasharray: 3 7;
+  stroke: rgba(169, 235, 226, 0.18);
+  stroke-width: 1.15px;
+}
+
+.brain-gyri {
+  fill: none;
+  stroke: rgba(247, 243, 233, 0.14);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.2px;
+}
+
+.brain-gyri path:nth-child(3n + 1) {
+  stroke: rgba(169, 235, 226, 0.2);
+}
+
+.brain-gyri path:nth-child(3n + 2) {
+  stroke: rgba(107, 143, 242, 0.14);
 }
 
 .neural-fade {
