@@ -2734,22 +2734,20 @@ svg {
 }
 
 
-/* Quiet echo of the hero brain, floating behind the contact actions. */
+/* Full hero brain graphic repeated behind the contact actions, smaller and
+   kept fully inside the section frame. */
 .closing-brain {
   position: absolute;
   z-index: 1;
   top: 50%;
-  right: -3%;
-  width: min(56%, 700px);
-  aspect-ratio: 620 / 525;
-  opacity: 0.6;
+  right: 4%;
+  width: min(46%, 620px);
   pointer-events: none;
   transform: translateY(-50%);
 }
 
-.closing-brain svg {
+.closing-brain .neural-graphic {
   width: 100%;
-  height: 100%;
 }
 
 footer {
