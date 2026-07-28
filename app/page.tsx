@@ -631,7 +631,7 @@ export default function Home() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/team/elena-asparouhova.webp"
+                  src="/team/elena-asparouhova-2026.webp"
                   alt="Elena Asparouhova"
                   width="452"
                   height="676"
