@@ -589,6 +589,7 @@ export default function Home() {
           <a href="#top">Overview</a>
           <a href="#team">Team</a>
           <a href="#research">Research</a>
+          <a href="#participate">Participate</a>
         </nav>
       </header>
 
