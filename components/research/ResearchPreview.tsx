@@ -34,7 +34,6 @@ export default function ResearchPreview() {
     <section className={styles.section} id="research">
       <div className={styles.heading}>
         <div>
-          <p className={styles.eyebrow}>Research program</p>
           <h2>Our research.</h2>
         </div>
         <div className={styles.intro}>

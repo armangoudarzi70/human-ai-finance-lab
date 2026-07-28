@@ -1037,6 +1037,7 @@ svg {
 
 .about-section {
   display: block;
+  padding-top: 72px;
 }
 
 /* Heading styled to match the research section's "Our research." block. */

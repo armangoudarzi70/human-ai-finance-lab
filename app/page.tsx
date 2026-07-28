@@ -601,7 +601,6 @@ export default function Home() {
 
         <section className="section about-section" id="team">
           <div className="about-heading">
-            <p className="eyebrow">Research team</p>
             <h2>Our team.</h2>
             <p className="about-intro">
               Human–AI Finance Lab is a collaboration across two business
