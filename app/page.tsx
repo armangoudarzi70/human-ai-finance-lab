@@ -83,6 +83,14 @@ function SparkIcon() {
   );
 }
 
+// Side-view human brain facing left, so the AI signal enters through the
+// frontal lobe. The scalloped outline traces gyri; the cerebellum and brain
+// stem are drawn as separate structures so the silhouette reads anatomically.
+const CEREBRUM_PATH =
+  "M192 295C184 272 186 250 196 232C192 226 192 219 197 213C205 190 220 170 240 154C238 147 240 140 246 136C262 118 283 104 307 96C309 90 315 85 322 84C345 76 370 74 394 78C399 74 407 73 414 76C438 79 461 86 481 97C488 94 496 95 502 100C524 111 543 126 558 145C565 144 572 148 576 154C592 172 603 193 609 216C614 220 617 226 617 233C620 252 618 271 611 289C613 296 611 304 606 310C597 324 585 335 571 342C566 348 559 351 552 350C536 352 521 350 508 344C501 349 494 356 490 364C480 382 465 396 447 404C443 410 436 413 429 412C411 416 392 417 374 413C369 417 362 418 356 415C337 409 321 398 309 383C303 375 300 366 300 357C294 349 287 344 279 342C258 336 238 327 222 315C210 309 198 303 192 295Z";
+const CEREBELLUM_PATH =
+  "M489 372C492 359 501 350 514 346C536 340 560 339 583 344C601 348 616 357 624 371C631 383 631 397 624 408C613 424 595 434 574 438C550 442 525 439 506 429C494 422 487 411 485 399C484 390 485 380 489 372Z";
+
 function NeuralBrainGraphic() {
   return (
     <div className="neural-graphic" aria-hidden="true">
@@ -109,44 +117,41 @@ function NeuralBrainGraphic() {
             </feMerge>
           </filter>
           <clipPath id="brainClip">
-            <path d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z" />
+            <path d={CEREBRUM_PATH} />
+            <path d={CEREBELLUM_PATH} />
           </clipPath>
         </defs>
 
-        <path
-          className="brain-shell-fill"
-          d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z"
-        />
+        <path className="brain-shell-fill" d={CEREBRUM_PATH} />
+        <path className="brain-shell-fill" d={CEREBELLUM_PATH} />
         <g className="brain-outline">
-          <path d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z" />
-          <path d="M354 99C338 130 342 159 365 181" />
-          <path d="M496 111C478 133 474 157 486 179" />
-          <path d="M583 207C550 202 525 215 512 240" />
-          <path d="M577 330C545 308 515 309 489 329" />
-          <path d="M489 408C470 381 441 368 411 376" />
-          <path d="M359 400C372 366 363 337 338 315" />
-          <path d="M254 342C281 330 294 307 293 278" />
-          <path d="M238 224C270 230 294 218 308 193" />
+          <path d={CEREBRUM_PATH} />
+          <path d={CEREBELLUM_PATH} />
+          <path d="M456 406C450 423 439 438 423 450C412 459 405 470 402 483C412 492 428 494 439 486C441 473 447 463 457 455C472 443 483 429 490 413" />
+          <path d="M297 348C320 342 342 338 364 335C380 333 396 331 412 327C432 322 452 314 468 300" />
+          <path d="M412 84C407 106 410 126 403 146C396 165 394 184 396 203C397 216 394 228 388 239" />
+          <path d="M504 368C532 359 566 358 596 366" />
+          <path d="M498 386C530 376 570 375 606 384" />
+          <path d="M502 404C534 394 574 393 604 402" />
+          <path d="M512 421C540 412 572 411 596 419" />
         </g>
 
         <g className="brain-gyri" clipPath="url(#brainClip)">
-          <path d="M267 161C292 136 326 133 348 152C365 167 365 190 348 207C330 226 300 221 286 243C275 260 283 281 302 288" />
-          <path d="M338 105C321 124 323 145 340 158" />
-          <path d="M395 91C370 111 367 140 386 157C405 174 434 162 448 183C459 199 453 218 438 229" />
-          <path d="M471 111C449 126 447 151 464 168C483 186 512 171 531 191C546 207 541 229 525 242" />
-          <path d="M546 143C528 161 529 181 545 194" />
-          <path d="M568 218C546 220 529 236 531 256C533 277 557 286 557 307" />
-          <path d="M594 270C568 263 548 274 539 294C530 315 542 333 563 340" />
-          <path d="M542 354C520 336 494 338 482 358C469 379 482 399 501 409" />
-          <path d="M469 405C454 382 427 377 408 392C394 404 392 420 400 435" />
-          <path d="M364 397C349 374 323 369 305 384" />
-          <path d="M279 355C300 345 308 326 299 308C290 290 268 287 250 297" />
-          <path d="M240 244C262 249 281 240 290 223" />
-          <path d="M320 258C337 239 361 238 378 253C396 269 390 294 374 308C358 322 336 318 326 336C317 351 325 367 340 375" />
-          <path d="M411 206C391 224 393 249 413 263C435 279 462 265 480 282C497 298 491 323 472 336" />
-          <path d="M398 328C414 306 442 304 459 322C475 338 468 359 454 371" />
-          <path d="M494 229C474 245 476 268 494 280" />
-          <path d="M355 180C378 168 402 178 408 198" />
+          <path d="M228 232C248 210 278 206 296 222C310 235 308 256 292 266C276 276 254 271 244 288C236 301 242 316 256 322" />
+          <path d="M262 172C284 152 312 152 328 168C341 181 339 202 324 212" />
+          <path d="M212 286C230 274 252 276 264 292" />
+          <path d="M352 96C332 114 332 138 350 152C368 166 394 158 408 176C420 191 416 212 400 222" />
+          <path d="M432 102C452 88 478 92 492 110C504 126 500 148 484 158" />
+          <path d="M430 190C452 178 478 184 490 202C500 218 496 238 480 246" />
+          <path d="M544 158C562 172 566 194 552 210C540 224 518 226 508 244" />
+          <path d="M576 226C558 232 548 250 554 268C560 284 578 292 578 308" />
+          <path d="M584 300C566 296 550 306 546 322" />
+          <path d="M330 218C352 206 376 210 390 226" />
+          <path d="M348 262C370 248 396 252 412 268C424 280 422 298 408 306" />
+          <path d="M448 296C468 286 490 292 502 308" />
+          <path d="M300 322C318 310 342 308 360 318" />
+          <path d="M318 356C340 342 366 344 384 358C396 368 398 384 388 394" />
+          <path d="M406 366C424 354 446 356 460 370" />
         </g>
 
         <g className="neural-fade" clipPath="url(#brainClip)">
@@ -573,29 +578,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="signal-strip" aria-label="Human–AI Finance Lab research lenses">
-          <div>
-            <strong>01</strong>
-            <span>Human objectives</span>
-            <small>What people are trying to achieve</small>
-          </div>
-          <div>
-            <strong>02</strong>
-            <span>AI signals</span>
-            <small>What systems clarify or amplify</small>
-          </div>
-          <div>
-            <strong>03</strong>
-            <span>Financial choice</span>
-            <small>How behavior changes under uncertainty</small>
-          </div>
-          <div>
-            <strong>04</strong>
-            <span>Lasting effects</span>
-            <small>What remains after support ends</small>
-          </div>
-        </section>
-
         <section className="section about-section" id="team">
           <div className="section-index">01</div>
           <div className="section-heading">
@@ -636,7 +618,13 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <div className="about-portrait">
+              <a
+                className="about-portrait"
+                href="https://www.nathanseegert.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Nathan Seegert’s website"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/team/nathan-seegert.jpg"
@@ -645,8 +633,8 @@ export default function Home() {
                   height="1536"
                   loading="lazy"
                 />
-                <span>Finance · Public economics</span>
-              </div>
+                <span>Finance · Public economics · Website ↗</span>
+              </a>
               <div className="about-person-copy">
                 <small>Northeastern University</small>
                 <h3>Nathan Seegert</h3>
