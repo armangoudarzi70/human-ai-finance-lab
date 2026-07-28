@@ -970,6 +970,47 @@ export default function Home() {
         </>
         ) : null}
 
+        <section className="participate-section" id="participate">
+          <div className="participate-copy">
+            <h2>Participate in our research</h2>
+            <p>
+              Are you a University of Utah student? Join the research
+              participant pool to hear about upcoming studies on human
+              judgment, artificial intelligence, and financial decision-making.
+            </p>
+            <small>
+              Participation is voluntary. Eligibility and compensation vary by
+              study.
+            </small>
+          </div>
+
+          <a
+            className="sona-card"
+            href="https://universityofutah.sona-systems.com/Default.aspx?ReturnUrl=%2f"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the University of Utah SONA participant portal"
+          >
+            <div className="sona-card-top">
+              <span>University of Utah</span>
+              <i>SONA</i>
+            </div>
+            <strong>Join the research participant pool</strong>
+            <p>
+              Browse available studies, check your eligibility, and choose
+              opportunities that interest you.
+            </p>
+            <span className="sona-card-action">
+              Open the participant portal <ArrowIcon />
+            </span>
+            <div className="sona-card-orbits" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+          </a>
+        </section>
+
         <section className="closing-section" id="contact">
           <h2>Get in touch</h2>
           <p className="closing-intro">
