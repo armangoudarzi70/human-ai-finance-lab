@@ -83,58 +83,134 @@ function SparkIcon() {
   );
 }
 
-function OrbitGraphic() {
+function NeuralBrainGraphic() {
   return (
-    <div className="orbit-graphic" aria-hidden="true">
-      <div className="orbit-grid" />
-      <svg className="orbit-lines" viewBox="0 0 620 540">
+    <div className="neural-graphic" aria-hidden="true">
+      <div className="neural-grid" />
+      <div className="brain-aura brain-aura-one" />
+      <div className="brain-aura brain-aura-two" />
+      <svg className="brain-map" viewBox="0 0 720 610">
         <defs>
-          <linearGradient id="lineGlow" x1="0" x2="1">
+          <linearGradient id="neuralSignal" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#f0b35a" />
-            <stop offset="52%" stopColor="#64d7cc" />
-            <stop offset="100%" stopColor="#6d91ff" />
+            <stop offset="48%" stopColor="#64d7cc" />
+            <stop offset="100%" stopColor="#7595ff" />
           </linearGradient>
+          <radialGradient id="nodeGlow">
+            <stop offset="0%" stopColor="#fffdf8" />
+            <stop offset="38%" stopColor="#64d7cc" />
+            <stop offset="100%" stopColor="#64d7cc" stopOpacity="0" />
+          </radialGradient>
+          <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <clipPath id="brainClip">
+            <path d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z" />
+          </clipPath>
         </defs>
-        <path
-          className="signal-path signal-path-a"
-          d="M88 387 C176 355 192 190 306 232 C407 270 426 114 550 147"
-        />
-        <path
-          className="signal-path signal-path-b"
-          d="M81 416 C190 467 244 346 322 367 C411 391 449 267 559 286"
-        />
-        <path
-          className="signal-path-main"
-          d="M76 401 C168 382 206 233 307 265 C411 299 447 159 558 175"
-        />
-        <circle cx="76" cy="401" r="7" />
-        <circle cx="307" cy="265" r="7" />
-        <circle cx="558" cy="175" r="7" />
+
+        <g className="head-profile">
+          <path d="M326 474C332 520 311 552 296 586" />
+          <path d="M484 423C484 472 498 516 531 568" />
+          <path d="M250 165C277 109 329 74 395 71C493 66 568 124 590 210C599 244 590 274 605 298L635 340C643 354 634 368 617 371L594 375L600 407C602 421 593 431 577 433L562 435C563 458 550 475 525 479L484 482" />
+          <path d="M588 211C564 222 551 241 552 269" />
+        </g>
+
+        <g className="brain-outline">
+          <path d="M248 165C251 111 304 77 354 99C390 55 466 60 496 111C553 108 593 153 583 207C626 237 623 303 577 330C583 382 536 421 489 408C454 449 385 443 359 400C309 422 254 389 254 342C209 317 203 255 238 224C225 202 229 180 248 165Z" />
+          <path d="M354 99C338 130 342 159 365 181" />
+          <path d="M496 111C478 133 474 157 486 179" />
+          <path d="M583 207C550 202 525 215 512 240" />
+          <path d="M577 330C545 308 515 309 489 329" />
+          <path d="M489 408C470 381 441 368 411 376" />
+          <path d="M359 400C372 366 363 337 338 315" />
+          <path d="M254 342C281 330 294 307 293 278" />
+          <path d="M238 224C270 230 294 218 308 193" />
+        </g>
+
+        <g className="neural-fade" clipPath="url(#brainClip)">
+          <path d="M222 286C272 208 326 247 356 176C386 105 449 138 477 208C506 280 548 223 601 262" />
+          <path d="M225 319C286 365 316 295 364 316C421 341 454 260 512 285C556 304 578 271 609 235" />
+          <path d="M257 190C306 171 337 210 382 220C431 231 463 193 518 172C551 159 574 176 597 202" />
+          <path d="M276 386C300 348 321 361 354 374C397 392 417 337 449 322C489 303 526 346 561 374" />
+          <path d="M315 108C301 151 326 179 365 192C409 207 401 254 378 281C353 311 384 349 425 346C472 342 472 392 501 420" />
+          <path d="M430 75C413 124 436 150 470 174C502 196 487 237 460 258C426 285 445 316 478 326" />
+          <path d="M244 248C291 263 315 246 340 217" />
+          <path d="M286 405C327 385 334 348 318 320" />
+          <path d="M523 123C525 164 550 186 588 191" />
+          <path d="M526 404C519 367 534 342 566 324" />
+        </g>
+
+        <g className="neural-secondary" clipPath="url(#brainClip)">
+          <path d="M238 288C288 229 324 259 356 211C384 168 421 174 452 204C484 235 513 226 557 196" />
+          <path d="M250 324C292 353 325 317 363 329C398 341 418 304 451 289C493 270 523 313 571 294" />
+          <path d="M300 139C326 164 356 164 382 148C415 129 446 144 462 172" />
+          <path d="M306 379C342 359 368 370 389 393C414 418 448 407 470 381" />
+        </g>
+
+        <g className="neural-signal">
+          <path className="signal-entry" d="M86 304C133 304 167 301 206 292C250 282 283 264 318 246C365 221 404 244 443 261C488 280 527 250 566 213" />
+          <path className="signal-branch branch-one" d="M318 246C336 206 357 180 389 154C418 130 447 139 468 166" />
+          <path className="signal-branch branch-two" d="M443 261C430 300 444 326 479 342C507 354 530 373 535 401" />
+          <path className="signal-branch branch-three" d="M366 229C376 270 365 302 340 326C319 346 319 371 343 394" />
+        </g>
+
+        <g className="neural-nodes">
+          {[
+            [206, 292],
+            [258, 272],
+            [318, 246],
+            [366, 229],
+            [389, 154],
+            [443, 261],
+            [468, 166],
+            [479, 342],
+            [535, 401],
+            [340, 326],
+            [343, 394],
+            [566, 213],
+          ].map(([cx, cy], index) => (
+            <g key={`${cx}-${cy}`} className={`neural-node node-${(index % 4) + 1}`}>
+              <circle className="node-halo" cx={cx} cy={cy} r="16" />
+              <circle className="node-core" cx={cx} cy={cy} r="4.5" />
+            </g>
+          ))}
+        </g>
+
       </svg>
-      <div className="orbit-node orbit-human">
-        <span>Human</span>
-        <strong>Judgment</strong>
+
+      <div className="ai-source">
+        <div className="ai-source-rings">
+          <span />
+          <span />
+          <i>
+            <SparkIcon />
+          </i>
+        </div>
+        <div>
+          <small>Artificial intelligence</small>
+          <strong>Signal</strong>
+        </div>
       </div>
-      <div className="orbit-node orbit-ai">
-        <span>AI</span>
-        <strong>Signal</strong>
+
+      <div className="brain-label label-context">
+        <span>01</span>
+        <p>Context enters a human system.</p>
       </div>
-      <div className="orbit-node orbit-choice">
-        <span>Observed</span>
-        <strong>Choice</strong>
+      <div className="brain-label label-pathways">
+        <span>02</span>
+        <p>The signal moves through existing pathways.</p>
       </div>
-      <div className="orbit-note note-capacity">
-        <span>Decision capacity</span>
-        <b>Can AI help people act on an objective?</b>
+      <div className="brain-label label-judgment">
+        <span>03</span>
+        <p>Human judgment remains in the loop.</p>
       </div>
-      <div className="orbit-note note-preference">
-        <span>Preferences</span>
-        <b>Or does it change the objective itself?</b>
-      </div>
-      <div className="orbit-axis">
-        <span>Information</span>
-        <span>Interpretation</span>
-        <span>Action</span>
+      <div className="concept-note">
+        Conceptual signal map
       </div>
     </div>
   );
@@ -465,10 +541,9 @@ export default function Home() {
           </span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#about">About</a>
+          <a href="#team">Team</a>
           <a href="#paper">Research</a>
           <a href="#experiment">Experiment</a>
-          <a href="#team">Team</a>
         </nav>
         <a className="header-cta" href="#paper">
           Featured study <ArrowIcon />
@@ -486,22 +561,9 @@ export default function Home() {
               Financial decisions
               <span>at the edge of intelligence.</span>
             </h1>
-            <p className="hero-intro">
-              We study when AI helps people make better financial decisions,
-              when it changes what they want, and what—if anything—remains after
-              the tool is gone.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#paper">
-                Explore the research <ArrowIcon />
-              </a>
-              <a className="text-link" href="#experiment">
-                Walk through the experiment <span>↓</span>
-              </a>
-            </div>
           </div>
           <div className="hero-visual">
-            <OrbitGraphic />
+            <NeuralBrainGraphic />
           </div>
           <div className="hero-footer">
             <span>Human–AI Finance Lab</span>
@@ -510,61 +572,110 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="signal-strip" aria-label="Featured study highlights">
+        <section className="signal-strip" aria-label="Human–AI Finance Lab research lenses">
           <div>
-            <strong>95</strong>
-            <span>participants</span>
+            <strong>01</strong>
+            <span>Human objectives</span>
+            <small>What people are trying to achieve</small>
           </div>
           <div>
-            <strong>3</strong>
-            <span>experimental parts</span>
+            <strong>02</strong>
+            <span>AI signals</span>
+            <small>What systems clarify or amplify</small>
           </div>
           <div>
-            <strong>41%</strong>
-            <span>lower advice error with AI</span>
+            <strong>03</strong>
+            <span>Financial choice</span>
+            <small>How behavior changes under uncertainty</small>
           </div>
           <div>
-            <strong>1</strong>
-            <span>central question: tool or teacher?</span>
+            <strong>04</strong>
+            <span>Lasting effects</span>
+            <small>What remains after support ends</small>
           </div>
         </section>
 
-        <section className="section about-section" id="about">
+        <section className="section about-section" id="team">
           <div className="section-index">01</div>
           <div className="section-heading">
-            <p className="eyebrow">Our focus</p>
+            <p className="eyebrow">Research team</p>
             <h2>
-              AI does not make decisions in a vacuum.
-              <span>People bring objectives, uncertainty, and judgment.</span>
+              Economics, finance,
+              <span>and experimental design.</span>
             </h2>
           </div>
-          <div className="about-copy">
-            <p className="lead">
-              Human–AI Finance Lab is a research initiative for understanding
-              how artificial intelligence changes financial behavior—not only
-              outcomes, but the process that produces them.
-            </p>
+          <div className="team-intro-note">
             <p>
-              We use controlled experiments to separate distinct channels:
-              better interpretation of complex information, changes in
-              underlying preferences, misplaced confidence, and durable
-              learning. The aim is practical: build evidence for AI systems that
-              improve decisions without quietly replacing human objectives.
+              Human–AI Finance Lab is a collaboration across two business
+              schools. We combine financial theory, controlled experiments, and
+              AI systems design to understand decisions made with intelligent
+              tools.
             </p>
-            <div className="question-list">
-              <div>
-                <span>01</span>
-                <p>Does AI expand decision capacity?</p>
+          </div>
+          <div className="about-people" aria-label="Human–AI Finance Lab researchers">
+            <article>
+              <div className="about-portrait">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/team/elena-asparouhova.webp"
+                  alt="Elena Asparouhova"
+                  width="452"
+                  height="676"
+                  loading="lazy"
+                />
+                <span>Finance · Experimental economics</span>
               </div>
-              <div>
-                <span>02</span>
-                <p>Does it alter risk preferences?</p>
+              <div className="about-person-copy">
+                <small>University of Utah</small>
+                <h3>Elena Asparouhova</h3>
+                <p>
+                  Stena Faculty Chair and Professor of Finance at the David
+                  Eccles School of Business.
+                </p>
               </div>
-              <div>
-                <span>03</span>
-                <p>Does learning persist after access ends?</p>
+            </article>
+            <article>
+              <div className="about-portrait">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/team/nathan-seegert.jpg"
+                  alt="Nathan Seegert"
+                  width="1024"
+                  height="1536"
+                  loading="lazy"
+                />
+                <span>Finance · Public economics</span>
               </div>
-            </div>
+              <div className="about-person-copy">
+                <small>Northeastern University</small>
+                <h3>Nathan Seegert</h3>
+                <p>
+                  Philip R. McDonald Chair Professor of Finance in the
+                  D&apos;Amore-McKim School of Business.
+                </p>
+              </div>
+            </article>
+            <article>
+              <div className="about-portrait">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/team/arman-goudarzi.jpg"
+                  alt="Arman Goudarzi"
+                  width="600"
+                  height="900"
+                  loading="lazy"
+                />
+                <span>Finance · Human–AI interaction</span>
+              </div>
+              <div className="about-person-copy">
+                <small>University of Utah</small>
+                <h3>Arman Goudarzi</h3>
+                <p>
+                  PhD Candidate in Finance at the David Eccles School of
+                  Business.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -835,43 +946,6 @@ export default function Home() {
                 decisions while preserving human agency.
               </p>
               <span className="muted-link">Research agenda</span>
-            </article>
-          </div>
-        </section>
-
-        <section className="section team-section" id="team">
-          <div className="section-index">04</div>
-          <div className="section-heading">
-            <p className="eyebrow">Research team</p>
-            <h2>
-              Economics, finance,
-              <span>and experimental design.</span>
-            </h2>
-          </div>
-          <div className="team-grid">
-            <article>
-              <span className="team-monogram">EA</span>
-              <h3>Elena Asparouhova</h3>
-              <p>University of Utah · Eccles School of Business</p>
-              <a href="mailto:elena.asparouhova@eccles.utah.edu">
-                Email <ArrowIcon />
-              </a>
-            </article>
-            <article>
-              <span className="team-monogram">AG</span>
-              <h3>Arman Goudarzi</h3>
-              <p>University of Utah · Eccles School of Business</p>
-              <a href="mailto:arman.goudarzi@eccles.utah.edu">
-                Email <ArrowIcon />
-              </a>
-            </article>
-            <article>
-              <span className="team-monogram">NS</span>
-              <h3>Nathan Seegert</h3>
-              <p>Northeastern University · D’Amore-McKim School of Business</p>
-              <a href="mailto:n.seegert@northeastern.edu">
-                Email <ArrowIcon />
-              </a>
             </article>
           </div>
         </section>
