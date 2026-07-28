@@ -961,15 +961,28 @@ export default function Home() {
         </>
         ) : null}
 
-        <section className="closing-section">
-          <p className="eyebrow">Human–AI Finance Lab</p>
+        <section className="closing-section" id="contact">
+          <p className="eyebrow">Get in touch</p>
           <h2>
-            Better financial intelligence begins with understanding
-            <em>the human in the loop.</em>
+            Questions about the studies, collaboration, or a talk?
+            <em>We’d like to hear from you.</em>
           </h2>
-          <a className="button button-light" href="mailto:arman.goudarzi@eccles.utah.edu">
-            Start a conversation <ArrowIcon />
-          </a>
+          <div className="closing-actions">
+            <a
+              className="button button-light"
+              href="mailto:arman.goudarzi@eccles.utah.edu"
+            >
+              Email the team <ArrowIcon />
+            </a>
+            <a
+              className="closing-ssrn"
+              href={featuredStudy.ssrnUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Working paper on SSRN <ArrowIcon />
+            </a>
+          </div>
           <div className="closing-orbit" aria-hidden="true">
             <span />
             <span />

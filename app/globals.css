@@ -2680,13 +2680,46 @@ svg {
 .button-light {
   position: relative;
   z-index: 2;
-  margin-top: 55px;
   background: var(--teal);
   color: var(--ink-deep);
 }
 
 .button-light:hover {
   background: var(--paper);
+}
+
+.closing-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 36px;
+  margin-top: 55px;
+}
+
+.closing-ssrn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--teal-light);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.closing-ssrn svg {
+  width: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  transition: transform 180ms ease;
+}
+
+.closing-ssrn:hover svg {
+  transform: translateX(5px);
 }
 
 .closing-orbit {
