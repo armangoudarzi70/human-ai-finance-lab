@@ -40,6 +40,14 @@ export default function StudyPage() {
               </div>
               <h1>{featuredStudy.title}</h1>
               <p>{featuredStudy.authors?.join(" · ")}</p>
+              <a
+                className={styles.heroSsrn}
+                href={featuredStudy.ssrnUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Working paper on SSRN <Arrow />
+              </a>
             </div>
 
             <div className={styles.heroSummary}>
@@ -329,10 +337,16 @@ export default function StudyPage() {
             <h2>Follow the project as it develops.</h2>
           </div>
           <div className={styles.materialLinks}>
-            <span>
+            <a
+              href={featuredStudy.ssrnUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <small>Working paper</small>
-              <strong>Draft forthcoming</strong>
-            </span>
+              <strong>
+                Read on SSRN <Arrow />
+              </strong>
+            </a>
             <span>
               <small>Experiment materials</small>
               <strong>Documentation in preparation</strong>

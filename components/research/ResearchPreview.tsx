@@ -40,9 +40,18 @@ export default function ResearchPreview() {
             We study how artificial intelligence changes financial judgment,
             advice, learning, and market behavior.
           </p>
-          <Link href="/research">
-            View all research <Arrow />
-          </Link>
+          <div className={styles.introLinks}>
+            <a
+              href={featuredStudy.ssrnUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Featured paper on SSRN <Arrow />
+            </a>
+            <Link href="/research">
+              View all research <Arrow />
+            </Link>
+          </div>
         </div>
       </div>
 

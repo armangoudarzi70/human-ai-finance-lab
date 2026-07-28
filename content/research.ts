@@ -8,6 +8,7 @@ export type ResearchStudy = {
   summary: string;
   authors?: string[];
   year?: string;
+  ssrnUrl?: string;
   tags: string[];
 };
 
@@ -23,6 +24,7 @@ export const researchStudies: ResearchStudy[] = [
       "A randomized experiment separating changes in decision capacity from changes in underlying risk preferences.",
     authors: ["Elena Asparouhova", "Arman Goudarzi", "Nathan Seegert"],
     year: "2026",
+    ssrnUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7119739",
     tags: ["Portfolio choice", "AI advice", "Risk preferences"],
   },
   {

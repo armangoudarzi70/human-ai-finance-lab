@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import BrainMark from "@/components/BrainMark";
 import ResearchPreview from "@/components/research/ResearchPreview";
+import { featuredStudy } from "@/content/research";
 
 type Phase = "part1" | "part2" | "part3";
 type Condition = "treatment" | "control";
@@ -709,6 +710,13 @@ export default function Home() {
                 Elena Asparouhova · Arman Goudarzi · Nathan Seegert
               </p>
               <div className="paper-links">
+                <a
+                  href={featuredStudy.ssrnUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read on SSRN <ArrowIcon />
+                </a>
                 <a href="#findings">
                   Read the findings <ArrowIcon />
                 </a>
