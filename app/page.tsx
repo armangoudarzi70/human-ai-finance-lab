@@ -240,6 +240,10 @@ function NeuralBrainGraphic() {
           <strong>AI signal</strong>
         </div>
       </div>
+
+      <div className="brain-caption">
+        <strong>Human brain</strong>
+      </div>
     </div>
   );
 }
@@ -592,11 +596,6 @@ export default function Home() {
           </div>
           <div className="hero-visual">
             <NeuralBrainGraphic />
-          </div>
-          <div className="hero-footer">
-            <span>Human–AI Finance Lab</span>
-            <span className="hero-footer-line" />
-            <span>Salt Lake City · Boston</span>
           </div>
         </section>
 
