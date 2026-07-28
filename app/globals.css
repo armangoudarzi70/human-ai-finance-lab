@@ -144,41 +144,42 @@ svg {
   text-transform: uppercase;
 }
 
-.wordmark-symbol {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 40px;
-  height: 40px;
-  overflow: hidden;
-  border: 1px solid rgba(247, 243, 233, 0.45);
-  border-radius: 50%;
+.wordmark-brain {
+  flex: 0 0 auto;
+  width: 46px;
+  height: auto;
+  overflow: visible;
 }
 
-.wordmark-symbol::after {
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  left: 50%;
-  width: 1px;
-  background: rgba(247, 243, 233, 0.28);
-  content: "";
-  transform: rotate(22deg);
+.wordmark-brain-shell {
+  fill: rgba(75, 202, 187, 0.06);
+  stroke: rgba(247, 243, 233, 0.5);
+  stroke-width: 1.3px;
+  stroke-linejoin: round;
 }
 
-.wordmark-symbol i {
-  display: grid;
-  place-items: center;
-  font-size: 9px;
-  font-style: normal;
+.wordmark-brain-split {
+  fill: none;
+  stroke: rgba(247, 243, 233, 0.28);
+  stroke-width: 1px;
+  stroke-dasharray: 2 3;
+  stroke-linecap: round;
 }
 
-.wordmark-symbol i:first-child {
-  color: var(--orange);
+.wordmark-brain text {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
 }
 
-.wordmark-symbol i:last-child {
-  color: var(--teal-light);
+.wordmark-brain text:first-of-type {
+  fill: var(--orange);
+}
+
+.wordmark-brain text:last-of-type {
+  fill: var(--teal-light);
 }
 
 .site-header nav {
@@ -2753,9 +2754,8 @@ footer {
   color: var(--paper);
 }
 
-.footer-wordmark .wordmark-symbol {
-  width: 36px;
-  height: 36px;
+.footer-wordmark .wordmark-brain {
+  width: 40px;
 }
 
 footer > p {

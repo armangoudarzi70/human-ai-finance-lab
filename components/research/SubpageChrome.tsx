@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrainMark from "@/components/BrainMark";
 import styles from "./SubpageChrome.module.css";
 
 function Arrow() {
@@ -13,10 +14,7 @@ export function SubpageHeader({ active }: { active?: "research" }) {
   return (
     <header className={styles.header}>
       <Link className={styles.wordmark} href="/" aria-label="Human–AI Finance Lab home">
-        <span className={styles.symbol}>
-          <i>H</i>
-          <i>AI</i>
-        </span>
+        <BrainMark />
         <span>
           Human–AI
           <small>Finance Lab</small>
@@ -42,10 +40,7 @@ export function SubpageFooter() {
   return (
     <footer className={styles.footer}>
       <Link className={styles.wordmark} href="/">
-        <span className={styles.symbol}>
-          <i>H</i>
-          <i>AI</i>
-        </span>
+        <BrainMark />
         <span>
           Human–AI
           <small>Finance Lab</small>

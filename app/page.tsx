@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import BrainMark from "@/components/BrainMark";
 import ResearchPreview from "@/components/research/ResearchPreview";
 
 type Phase = "part1" | "part2" | "part3";
@@ -567,10 +568,7 @@ export default function Home() {
       </a>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Human–AI Finance Lab home">
-          <span className="wordmark-symbol">
-            <i>H</i>
-            <i>AI</i>
-          </span>
+          <BrainMark />
           <span>
             Human–AI
             <small>Finance Lab</small>
@@ -990,10 +988,7 @@ export default function Home() {
 
       <footer>
         <a className="wordmark footer-wordmark" href="#top">
-          <span className="wordmark-symbol">
-            <i>H</i>
-            <i>AI</i>
-          </span>
+          <BrainMark />
           <span>
             Human–AI
             <small>Finance Lab</small>
