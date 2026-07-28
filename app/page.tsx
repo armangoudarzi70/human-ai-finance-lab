@@ -591,7 +591,7 @@ export default function Home() {
             </p>
             <h1>
               Financial decisions
-              <span>at the edge of intelligence.</span>
+              <span>at the edge of intelligence</span>
             </h1>
           </div>
           <div className="hero-visual">
@@ -601,7 +601,7 @@ export default function Home() {
 
         <section className="section about-section" id="team">
           <div className="about-heading">
-            <h2>Our team.</h2>
+            <h2>Our team</h2>
             <p className="about-intro">
               Human–AI Finance Lab is a collaboration across two business
               schools. We combine financial theory, controlled experiments, and
@@ -611,7 +611,13 @@ export default function Home() {
           </div>
           <div className="about-people" aria-label="Human–AI Finance Lab researchers">
             <article>
-              <div className="about-portrait">
+              <a
+                className="about-portrait"
+                href="https://scholar.google.com/citations?user=xYGUQjAAAAAJ&hl=en"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Elena Asparouhova’s Google Scholar profile"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/team/elena-asparouhova.webp"
@@ -620,8 +626,8 @@ export default function Home() {
                   height="676"
                   loading="lazy"
                 />
-                <span>Finance · Experimental economics</span>
-              </div>
+                <span>Finance · Experimental economics · Scholar ↗</span>
+              </a>
               <div className="about-person-copy">
                 <small>University of Utah</small>
                 <h3>Elena Asparouhova</h3>
