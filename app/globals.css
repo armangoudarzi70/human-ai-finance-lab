@@ -2671,44 +2671,60 @@ svg {
 }
 
 .participate-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(440px, 1fr);
-  gap: clamp(60px, 9vw, 150px);
-  align-items: center;
-  padding: 130px clamp(24px, 6vw, 106px);
+  padding: 82px clamp(24px, 6vw, 106px);
   background:
     linear-gradient(120deg, rgba(75, 202, 187, 0.07), transparent 48%),
     var(--paper);
+}
+
+.participate-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 45, 51, 0.18);
+  background:
+    linear-gradient(135deg, rgba(75, 202, 187, 0.11), transparent 45%),
+    var(--ink-deep);
+  box-shadow: 0 20px 55px rgba(17, 45, 51, 0.08);
   color: var(--ink-deep);
 }
 
+.participate-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px clamp(36px, 4.2vw, 70px);
+  color: var(--paper);
+}
+
 .participate-copy h2 {
-  max-width: 760px;
+  max-width: 620px;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(55px, 6.1vw, 94px);
+  font-size: clamp(43px, 4.7vw, 68px);
   font-weight: 400;
-  letter-spacing: -0.062em;
-  line-height: 0.94;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
 }
 
 .participate-copy > p {
-  max-width: 650px;
-  margin: 34px 0 0;
-  color: var(--ink-soft);
+  max-width: 610px;
+  margin: 25px 0 0;
+  color: rgba(247, 243, 233, 0.68);
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 18px;
   letter-spacing: -0.015em;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .participate-copy > small {
   display: block;
   max-width: 560px;
-  margin-top: 25px;
-  color: rgba(17, 45, 51, 0.52);
+  margin-top: 20px;
+  color: rgba(169, 235, 226, 0.52);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.08em;
   line-height: 1.6;
   text-transform: uppercase;
@@ -2717,23 +2733,18 @@ svg {
 .sona-card {
   position: relative;
   display: flex;
-  min-height: 420px;
+  min-height: 100%;
   overflow: hidden;
   flex-direction: column;
-  padding: 42px;
-  border: 1px solid rgba(17, 45, 51, 0.16);
-  background:
-    linear-gradient(145deg, rgba(75, 202, 187, 0.13), transparent 54%),
-    var(--ink-deep);
+  padding: 38px 42px;
+  border-left: 1px solid rgba(247, 243, 233, 0.13);
+  background: rgba(4, 22, 27, 0.24);
   color: var(--paper);
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease;
+  transition: background 200ms ease;
 }
 
 .sona-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(17, 45, 51, 0.14);
+  background: rgba(75, 202, 187, 0.08);
 }
 
 .sona-card-top {
@@ -2742,7 +2753,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(247, 243, 233, 0.14);
   color: rgba(247, 243, 233, 0.55);
   font-family: var(--mono);
@@ -2766,10 +2777,10 @@ svg {
 .sona-card > strong {
   position: relative;
   z-index: 2;
-  max-width: 470px;
-  margin-top: 52px;
+  max-width: 380px;
+  margin-top: 34px;
   font-family: var(--serif);
-  font-size: clamp(34px, 3.2vw, 52px);
+  font-size: clamp(30px, 2.7vw, 42px);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.02;
@@ -2778,10 +2789,10 @@ svg {
 .sona-card > p {
   position: relative;
   z-index: 2;
-  max-width: 480px;
-  margin: 22px 0 0;
+  max-width: 390px;
+  margin: 17px 0 0;
   color: rgba(247, 243, 233, 0.62);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.65;
 }
 
@@ -2793,7 +2804,7 @@ svg {
   gap: 12px;
   width: fit-content;
   margin-top: auto;
-  padding-top: 38px;
+  padding-top: 30px;
   color: var(--teal-light);
   font-size: 11px;
   font-weight: 750;
@@ -2815,10 +2826,10 @@ svg {
 
 .sona-card-orbits {
   position: absolute;
-  right: -170px;
-  bottom: -220px;
-  width: 460px;
-  height: 460px;
+  right: -190px;
+  bottom: -235px;
+  width: 430px;
+  height: 430px;
   border: 1px solid rgba(169, 235, 226, 0.08);
   border-radius: 50%;
 }
@@ -3219,16 +3230,14 @@ footer > small {
     min-height: 250px;
   }
 
-  .participate-section {
+  .participate-panel {
     grid-template-columns: 1fr;
   }
 
-  .participate-copy {
-    max-width: 760px;
-  }
-
   .sona-card {
-    min-height: 390px;
+    min-height: 280px;
+    border-top: 1px solid rgba(247, 243, 233, 0.13);
+    border-left: 0;
   }
 
   footer {
@@ -3573,35 +3582,43 @@ footer > small {
   }
 
   .participate-section {
-    gap: 50px;
-    padding: 88px 20px;
+    padding: 58px 20px;
+  }
+
+  .participate-panel {
+    min-height: 0;
+  }
+
+  .participate-copy {
+    padding: 32px 28px 30px;
   }
 
   .participate-copy h2 {
-    font-size: 55px;
+    font-size: 44px;
   }
 
   .participate-copy > p {
-    margin-top: 28px;
-    font-size: 19px;
+    margin-top: 22px;
+    font-size: 17px;
   }
 
   .participate-copy > small {
-    font-size: 8px;
+    margin-top: 17px;
+    font-size: 7px;
   }
 
   .sona-card {
-    min-height: 410px;
+    min-height: 290px;
     padding: 28px;
   }
 
   .sona-card > strong {
-    margin-top: 42px;
-    font-size: 36px;
+    margin-top: 30px;
+    font-size: 32px;
   }
 
   .sona-card > p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .sona-card-orbits {
