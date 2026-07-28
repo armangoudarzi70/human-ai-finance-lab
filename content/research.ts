@@ -29,8 +29,8 @@ export const researchStudies: ResearchStudy[] = [
   },
   {
     number: "02",
-    status: "Study in development",
-    tone: "progress",
+    status: "Working paper",
+    tone: "live",
     title: "AI-Assisted Trading in Experimental Markets",
     shortTitle: "AI-assisted trading in experimental markets",
     summary:

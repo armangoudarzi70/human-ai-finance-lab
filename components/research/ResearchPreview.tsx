@@ -6,6 +6,7 @@ import {
   type ResearchStudy,
 } from "@/content/research";
 import ResearchResultCarousel from "./ResearchResultCarousel";
+import TradingRoomGraphic from "./TradingRoomGraphic";
 import styles from "./ResearchPreview.module.css";
 
 function Arrow() {
@@ -26,7 +27,8 @@ function Status({ study }: { study: ResearchStudy }) {
 }
 
 export default function ResearchPreview() {
-  const supportingStudies = researchStudies.slice(1);
+  const tradingStudy = researchStudies[1];
+  const supportingStudies = researchStudies.slice(2);
 
   return (
     <section className={styles.section} id="research">
@@ -77,6 +79,26 @@ export default function ResearchPreview() {
           </span>
         </Link>
         <ResearchResultCarousel />
+      </article>
+
+      <article className={`${styles.featured} ${styles.tradingFeatured}`}>
+        <div className={styles.featuredCopy}>
+          <div className={styles.cardTop}>
+            <span>{tradingStudy.number}</span>
+            <Status study={tradingStudy} />
+          </div>
+          <h3>{tradingStudy.title}</h3>
+          <p>{tradingStudy.summary}</p>
+          <div className={styles.tags}>
+            {tradingStudy.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+          <span className={styles.tradingNote}>
+            Dedicated study page in development
+          </span>
+        </div>
+        <TradingRoomGraphic />
       </article>
 
       <div className={styles.supportingGrid}>

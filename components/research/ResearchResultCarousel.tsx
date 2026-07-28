@@ -54,7 +54,7 @@ export default function ResearchResultCarousel() {
 
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % results.length);
-    }, 2000);
+    }, 5000);
 
     return () => window.clearInterval(timer);
   }, [paused]);

@@ -576,13 +576,10 @@ export default function Home() {
           </span>
         </a>
         <nav aria-label="Primary navigation">
+          <a href="#top">Overview</a>
           <a href="#team">Team</a>
-          <Link href="/research">Research</Link>
-          <Link href="/research/ai-exposure-risk-preferences">Featured study</Link>
+          <a href="#research">Research</a>
         </nav>
-        <Link className="header-cta" href="/research">
-          View research <ArrowIcon />
-        </Link>
       </header>
 
       <main id="main-content">
