@@ -640,17 +640,10 @@ svg {
   pointer-events: none;
 }
 
-.brain-aura-one {
-  top: 8%;
-  right: 0;
-  width: 82%;
-  aspect-ratio: 1;
-}
-
 .brain-aura-two {
-  top: 20%;
-  right: 12%;
-  width: 58%;
+  top: 9%;
+  right: 11%;
+  width: 56%;
   aspect-ratio: 1;
   border-style: dashed;
 }
@@ -696,6 +689,13 @@ svg {
 .brain-outline path:not(:first-child) {
   stroke: rgba(169, 235, 226, 0.18);
   stroke-width: 1.15px;
+}
+
+/* Cerebellum and brain stem: distinct anatomy, brighter than inner folds. */
+.brain-outline path:nth-child(2),
+.brain-outline path:nth-child(3) {
+  stroke: rgba(169, 235, 226, 0.34);
+  stroke-width: 1.35px;
 }
 
 .brain-gyri {
@@ -859,22 +859,46 @@ svg {
 .ai-source-rings i {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 46px;
+  height: 46px;
   border: 1px solid rgba(247, 243, 233, 0.3);
   border-radius: 50%;
   background: rgba(7, 29, 34, 0.92);
   box-shadow: 0 0 28px rgba(239, 170, 88, 0.12);
 }
 
-.ai-source-rings svg {
-  width: 16px;
+.ai-core {
+  width: 30px;
+  height: 30px;
+}
+
+.ai-core-links path {
+  fill: none;
+  stroke: rgba(247, 243, 233, 0.34);
+  stroke-width: 0.9px;
+  stroke-linecap: round;
+}
+
+.ai-core-nodes circle {
+  fill: var(--teal);
+}
+
+.ai-core-nodes circle:nth-child(4),
+.ai-core-nodes circle:nth-child(5) {
+  fill: var(--blue);
+}
+
+.ai-core-nodes .ai-core-out {
   fill: var(--orange);
+  animation: neural-breathe 3.5s ease-in-out infinite;
+  transform-origin: 32px 20px;
 }
 
 .ai-source > div:last-child {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
+  padding-bottom: 2px;
 }
 
 .ai-source small,
