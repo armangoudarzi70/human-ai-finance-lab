@@ -1036,7 +1036,32 @@ svg {
 }
 
 .about-section {
-  grid-template-rows: auto auto;
+  display: block;
+}
+
+/* Heading styled to match the research section's "Our research." block. */
+.about-heading {
+  margin-bottom: 70px;
+}
+
+.about-heading h2 {
+  max-width: 850px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(55px, 6.1vw, 94px);
+  font-weight: 400;
+  letter-spacing: -0.062em;
+  line-height: 0.94;
+}
+
+.about-intro {
+  max-width: 640px;
+  margin: 28px 0 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 21px;
+  letter-spacing: -0.015em;
+  line-height: 1.55;
 }
 
 .team-intro-note {
@@ -2698,29 +2723,6 @@ svg {
   margin-top: 55px;
 }
 
-.closing-ssrn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--teal-light);
-  font-size: 12px;
-  font-weight: 750;
-  letter-spacing: 0.02em;
-}
-
-.closing-ssrn svg {
-  width: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.5;
-  transition: transform 180ms ease;
-}
-
-.closing-ssrn:hover svg {
-  transform: translateX(5px);
-}
 
 .closing-orbit {
   position: absolute;

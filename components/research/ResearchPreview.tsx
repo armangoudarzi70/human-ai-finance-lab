@@ -58,26 +58,37 @@ export default function ResearchPreview() {
       </div>
 
       <article className={styles.featured}>
-        <Link
-          className={styles.featuredCopy}
-          href={studyHref(featuredStudy) ?? "/research"}
-          aria-label={`Open study: ${featuredStudy.title}`}
-        >
+        <div className={styles.featuredCopy}>
           <div className={styles.cardTop}>
             <span>{featuredStudy.number}</span>
             <Status study={featuredStudy} />
           </div>
-          <h3>{featuredStudy.title}</h3>
+          <h3>
+            <Link href={studyHref(featuredStudy) ?? "/research"}>
+              {featuredStudy.title}
+            </Link>
+          </h3>
           <p>{featuredStudy.summary}</p>
           <div className={styles.tags}>
             {featuredStudy.tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}
           </div>
-          <span className={styles.openStudy}>
+          <a
+            className={styles.bigSsrn}
+            href={featuredStudy.ssrnUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Paper on SSRN <Arrow />
+          </a>
+          <Link
+            className={styles.openStudy}
+            href={studyHref(featuredStudy) ?? "/research"}
+          >
             Open the study <Arrow />
-          </span>
-        </Link>
+          </Link>
+        </div>
         <ResearchResultCarousel />
       </article>
 

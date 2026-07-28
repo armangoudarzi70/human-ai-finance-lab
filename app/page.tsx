@@ -600,16 +600,10 @@ export default function Home() {
         </section>
 
         <section className="section about-section" id="team">
-          <div className="section-index">01</div>
-          <div className="section-heading">
+          <div className="about-heading">
             <p className="eyebrow">Research team</p>
-            <h2>
-              Economics, finance,
-              <span>and experimental design.</span>
-            </h2>
-          </div>
-          <div className="team-intro-note">
-            <p>
+            <h2>Our team.</h2>
+            <p className="about-intro">
               Human–AI Finance Lab is a collaboration across two business
               schools. We combine financial theory, controlled experiments, and
               AI systems design to understand decisions made with intelligent
@@ -973,14 +967,6 @@ export default function Home() {
               href="mailto:arman.goudarzi@eccles.utah.edu"
             >
               Email the team <ArrowIcon />
-            </a>
-            <a
-              className="closing-ssrn"
-              href={featuredStudy.ssrnUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Working paper on SSRN <ArrowIcon />
             </a>
           </div>
           <div className="closing-orbit" aria-hidden="true">
