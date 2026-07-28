@@ -96,6 +96,49 @@ const CEREBRUM_PATH =
 const CEREBELLUM_PATH =
   "M483 366C486 353 496 345 509 341C530 335 554 334 576 339C594 343 609 352 617 365C624 377 624 391 617 402C611 413 601 421 589 427C585 432 578 434 572 431C559 437 545 439 532 437C526 440 519 440 514 436C502 431 493 423 487 412C482 403 480 392 481 382C481 376 482 370 483 366Z";
 
+// Quiet echo of the hero brain for the closing section: anatomy and folds
+// only — no signal, nodes, or labels.
+function ClosingBrainGraphic() {
+  return (
+    <div className="closing-brain" aria-hidden="true">
+      <svg viewBox="40 45 620 525">
+        <clipPath id="closingBrainClip">
+          <path d={CEREBRUM_PATH} />
+          <path d={CEREBELLUM_PATH} />
+        </clipPath>
+        <path className="brain-shell-fill" d={CEREBRUM_PATH} />
+        <path className="brain-shell-fill" d={CEREBELLUM_PATH} />
+        <g className="brain-outline">
+          <path d={CEREBRUM_PATH} />
+          <path d={CEREBELLUM_PATH} />
+          <path d="M452 404C446 421 435 436 419 448C408 457 401 468 398 481C408 490 424 492 437 484C439 471 445 461 455 453C470 441 481 427 488 411" />
+          <path d="M310 340C330 334 350 330 370 328C382 327 394 325 406 321C426 315 446 307 462 295" />
+          <path d="M413 70C407 92 411 112 404 132C397 152 395 172 397 191C398 205 395 218 389 230" />
+          <path d="M498 362C526 353 560 352 590 360" />
+          <path d="M492 380C524 370 564 369 600 378" />
+          <path d="M496 398C528 388 568 387 598 396" />
+          <path d="M506 416C534 407 566 406 590 414" />
+        </g>
+        <g className="brain-gyri" clipPath="url(#closingBrainClip)">
+          <path d="M214 240C232 222 258 218 276 232C290 243 290 262 276 272C262 282 242 278 232 292C224 303 228 316 240 322" />
+          <path d="M254 160C274 142 300 142 316 156C328 167 326 186 312 196C300 205 282 202 274 214" />
+          <path d="M296 96C282 110 280 128 292 140C302 150 318 150 326 140" />
+          <path d="M348 84C330 100 328 122 344 136C358 148 380 144 392 158C404 170 402 190 388 200" />
+          <path d="M452 96C470 86 492 90 504 106C514 119 510 138 496 146" />
+          <path d="M428 158C448 148 470 152 482 168C492 181 488 200 474 208" />
+          <path d="M372 216C390 206 410 210 422 224C430 234 428 248 418 256" />
+          <path d="M540 148C558 160 562 180 550 194C540 206 522 208 512 222" />
+          <path d="M578 200C562 208 554 224 560 240C566 254 582 260 582 274" />
+          <path d="M596 254C580 252 566 262 562 278C559 292 568 304 582 306" />
+          <path d="M322 356C342 342 368 342 386 354C398 362 400 378 390 388" />
+          <path d="M342 258C362 246 386 248 402 262C412 271 412 286 402 294" />
+          <path d="M436 288C456 278 478 282 492 296C500 304 500 316 492 324" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 function NeuralBrainGraphic() {
   return (
     <div className="neural-graphic" aria-hidden="true">
@@ -961,11 +1004,11 @@ export default function Home() {
         ) : null}
 
         <section className="closing-section" id="contact">
-          <p className="eyebrow">Get in touch</p>
-          <h2>
+          <h2>Get in touch</h2>
+          <p className="closing-intro">
             Questions about the studies, collaboration, or a talk?
             <em>We’d like to hear from you.</em>
-          </h2>
+          </p>
           <div className="closing-actions">
             <a
               className="button button-light"
@@ -974,11 +1017,7 @@ export default function Home() {
               Email the team <ArrowIcon />
             </a>
           </div>
-          <div className="closing-orbit" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
+          <ClosingBrainGraphic />
         </section>
       </main>
 

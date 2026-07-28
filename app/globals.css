@@ -2681,24 +2681,33 @@ svg {
   color: var(--paper);
 }
 
-.closing-section .eyebrow {
-  color: var(--teal-light);
-}
-
 .closing-section h2 {
   position: relative;
   z-index: 2;
-  max-width: 1020px;
+  max-width: 850px;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(54px, 6.4vw, 98px);
+  font-size: clamp(55px, 6.1vw, 94px);
   font-weight: 400;
   letter-spacing: -0.065em;
-  line-height: 0.96;
+  line-height: 0.94;
 }
 
-.closing-section h2 em {
+.closing-intro {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 34px 0 0;
+  color: rgba(247, 243, 233, 0.76);
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 32px);
+  letter-spacing: -0.025em;
+  line-height: 1.36;
+}
+
+.closing-intro em {
   display: block;
+  margin-top: 4px;
   color: var(--orange);
   font-weight: 400;
 }
@@ -2725,58 +2734,22 @@ svg {
 }
 
 
-.closing-orbit {
+/* Quiet echo of the hero brain, floating behind the contact actions. */
+.closing-brain {
   position: absolute;
-  top: -15%;
-  right: -7%;
-  width: 700px;
-  height: 700px;
-  border: 1px solid rgba(247, 243, 233, 0.08);
-  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  right: -3%;
+  width: min(56%, 700px);
+  aspect-ratio: 620 / 525;
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 
-.closing-orbit::before,
-.closing-orbit::after {
-  position: absolute;
-  border: 1px solid rgba(247, 243, 233, 0.07);
-  border-radius: 50%;
-  content: "";
-}
-
-.closing-orbit::before {
-  inset: 100px;
-}
-
-.closing-orbit::after {
-  inset: 220px;
-}
-
-.closing-orbit span {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 25px rgba(75, 202, 187, 0.6);
-}
-
-.closing-orbit span:nth-child(1) {
-  top: 25%;
-  left: 8%;
-}
-
-.closing-orbit span:nth-child(2) {
-  top: 47%;
-  left: 47%;
-  background: var(--orange);
-  box-shadow: 0 0 25px rgba(239, 170, 88, 0.5);
-}
-
-.closing-orbit span:nth-child(3) {
-  right: 8%;
-  bottom: 21%;
-  background: var(--blue);
-  box-shadow: 0 0 25px rgba(107, 143, 242, 0.5);
+.closing-brain svg {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -3400,11 +3373,16 @@ footer > small {
   }
 
   .closing-section h2 {
-    font-size: 50px;
+    font-size: 55px;
   }
 
-  .closing-orbit {
-    right: -90%;
+  .closing-intro {
+    margin-top: 28px;
+    font-size: 23px;
+  }
+
+  .closing-brain {
+    display: none;
   }
 
   footer {
