@@ -101,7 +101,11 @@ export default function ResearchPreview() {
         <TradingRoomGraphic />
       </article>
 
-      <div className={styles.supportingGrid}>
+      <div
+        className={`${styles.supportingGrid} ${
+          supportingStudies.length === 0 ? styles.programOnly : ""
+        }`}
+      >
         {supportingStudies.map((study) => (
           <article key={study.number} className={styles.supportingCard}>
             <div className={styles.cardTop}>

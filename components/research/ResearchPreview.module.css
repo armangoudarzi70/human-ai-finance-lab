@@ -788,6 +788,15 @@
   border-left: 1px solid rgba(17, 45, 51, 0.18);
 }
 
+/* With no supporting studies, the program card becomes a full-width band. */
+.programOnly {
+  grid-template-columns: 1fr;
+}
+
+.programOnly .programCard {
+  min-height: 240px;
+}
+
 .supportingCard,
 .programCard {
   display: flex;

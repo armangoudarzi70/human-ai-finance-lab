@@ -956,19 +956,6 @@ export default function Home() {
               </p>
               <span className="muted-link">Materials forthcoming</span>
             </article>
-            <article>
-              <div className="research-status">
-                <span className="status-dot" />
-                Research direction
-              </div>
-              <span className="research-number">03</span>
-              <h3>Designing accountable financial AI</h3>
-              <p>
-                Identifying interface and calibration choices that improve
-                decisions while preserving human agency.
-              </p>
-              <span className="muted-link">Research agenda</span>
-            </article>
           </div>
         </section>
         </>

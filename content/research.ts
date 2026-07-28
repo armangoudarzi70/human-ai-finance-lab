@@ -37,16 +37,6 @@ export const researchStudies: ResearchStudy[] = [
       "Studying how intelligent support affects trading behavior, price discovery, and welfare in controlled financial markets.",
     tags: ["Market design", "Trading", "Price discovery"],
   },
-  {
-    number: "03",
-    status: "Research direction",
-    tone: "direction",
-    title: "Designing Accountable Financial AI",
-    shortTitle: "Designing accountable financial AI",
-    summary:
-      "Identifying interface and calibration choices that improve financial decisions while preserving human agency.",
-    tags: ["Interface design", "Calibration", "Human agency"],
-  },
 ];
 
 export const featuredStudy = researchStudies[0];
