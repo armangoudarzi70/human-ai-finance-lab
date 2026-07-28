@@ -32,10 +32,6 @@ export default function ResearchPreview() {
       <div className={styles.heading}>
         <div>
           <p className={styles.eyebrow}>Our research</p>
-          <h2>
-            One question at a time.
-            <em>One page for every study.</em>
-          </h2>
         </div>
         <div className={styles.intro}>
           <p>
